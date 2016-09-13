@@ -24,7 +24,7 @@ def convertToTrueValues(dataList, keysToConvert):
     for object in dataList:
         for key in object:
             if key in keysToConvert:
-                object[key] = ((atan(object[key]) + (pi/2)) / (pi / 100))
+                object[key] = ((atan(object[key]) + (pi/2)) / (pi / 100)) # Calculates the true value
     return dataList
 
 # Converts the appropriate values in the given dataList to either floats or integers.
@@ -36,7 +36,7 @@ def convertToNumbers(dataList):
                     object[key] = float(object[key])
                 else:
                     object[key] = int(object[key])
-            except ValueError: # Will throw a ValueError if the value can't be converted to a float or integer.
+            except ValueError: # Handles a ValueError if the value can't be converted to a float or integer.
                 continue
 
     return dataList
